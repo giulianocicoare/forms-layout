@@ -1,3 +1,4 @@
+/* este foarte greu de citit codul cum le inghesui asa. iti sugerez sa pui accent pe indentare si pe saptiere intre blocuri diferite de cod */
 *{margin: 0px;
     padding:0px;}
     html,body {width:100%;
@@ -5,13 +6,23 @@
 .container {position: relative;
             width:100%;
             height: 30%;
-            background-image: url(../assets/background.jpg);
+            /* nu trebuie sa urci un nivel aici pentru ca nu ai pus main.css in resources */
+            background-image: url(assets/background.jpg);
             background-repeat: no-repeat;
             background-size: cover;}
-.logo-image img {width: 100px;
-                position: absolute;
-                left: 30px;
-                top: 30px;}
+
+/* dimensiunile puse direct pe img iti influenteaza la calitatea imagini pentru ca nu ai control. Este ok sa pui dimensiunile pe wrapper, nu direct pe imagine. Imaginea trebuie sa se adapteze. */
+.logo-image {
+    width: 100px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.logo-image img {
+    /* 100% de obicei pui la dimeansiunea ce mai mare dintre cele 2 si cea pe care vrei sa o iei drept referinta, intrucat cealalta sa se adapteze. */
+    width: 100%;
+    height: auto;
+}
 .nav-bar li{display:inline-block;
             float:right;
             margin: 30px 30px 0px 0px;}
@@ -27,6 +38,7 @@
     color: navy;
     background-color: white;
     }
+/* nu aveai nevoie de pozitionare aici, lejer s eputea rezolva cu margin */
 main .title {position: absolute;
             left: 30px;
             top: 80px;
